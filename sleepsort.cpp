@@ -41,9 +41,7 @@ int main(int argc, char** argv) {
 
 		unsigned int value;
 		if (!(ss >> value)) {
-			string invalid;
-			ss >> invalid;
-			cout << "You input a non-integer: " << invalid << endl;
+			cout << "You input a non-integer: " << argv[i] << endl;
 		} else {
 			threads.emplace_back(func, value);
 		}
